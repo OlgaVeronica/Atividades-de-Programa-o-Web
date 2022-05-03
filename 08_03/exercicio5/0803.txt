@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta name="viwerport" content="device-width", inicial-scale="0.1">
+        <meta charset="utf-8">
+        <meta name="author" content="Olga Veronica de Andrade Silva">
+        <meta
+            name="description"
+            content="Receita de Torta de Limão - 1972"
+        />
+
+        <meta name="keywords" content="receita, Torta de Limão" />
+
+        <title>:: Torta de Limão::</title>
+    </head>
+    <body>
+        <h1>Torta de Limão</h1>
+        <h2>(Dona Olga, receita de 1972)</h2>
+        <h3>Escolha um dos tipos de massa</h3>
+
+        <ol>
+            <li>Massa tipo 1</li>
+            <ul>
+                <li>Ingredientes</li>
+                <ul type="disc">
+                    <li>2 Xícaras de farinha de trigo</li>
+                    <li>4 colheres de açucar</li>
+                    <li>1 gema</li>
+                    <li>2 colheres de manteiga</li>
+                    <li>1 pitada de sal</li>
+                    <li>3 colheres de água (se precisar)</li>
+                </ul>
+
+                <li>Preparo</li>
+                <ul>
+                    <li>Bata todos os ingredientes</li>
+                    <li>Unte uma assadeira</li>
+                    <li>Coloque a massa na assadeira</li>
+                    <li>Leve ao forno até dourar</li>
+                </ul>
+            </ul>
+
+            <li>Massa tipo 2</li>
+            <ul>
+                <li>Ingredientes</li>
+                <ul>
+                    <li>1 pacote de 200g de biscoito Maizena</li>
+                    <li>100g de margarina ou manteiga</li>
+                </ul>
+
+                <li>Preparo</li>
+                <ul>
+                    <li>Triturar (no processador) o biscoito</li>
+                    <li>Acrescentar margarina ou manteiga</li>
+                    <li>Amassar com os dedos</li>
+                    <li>Distrivuir na forma untada</li>
+                    <li>Levar ao forno por 10 minutos para dourar</li>
+                </ul>
+            </ul>
+        </ol>
+    </body>
+</html>

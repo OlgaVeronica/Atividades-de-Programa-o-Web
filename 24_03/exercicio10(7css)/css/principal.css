@@ -1,0 +1,37 @@
+/* CSS PRINCIPAL
+arquivo:principal.css */
+
+body{
+    font-family: cursive;
+    background-color: rgb(248, 232, 246);
+    background-image: url(../imagens/lince.png);
+    background-repeat: no-repeat;
+    background-position: top right 20px;
+}
+h1{
+    text-align: left;
+}
+p{
+    width: 70%;
+}
+table{
+    border-spacing: 0px;
+    border: 5px;
+    border-style: outset;
+    width: 70%;
+    border-color:rgb(238, 159, 159)
+}
+
+th{
+    color:rgb(83, 40, 93);
+    border: 1px solid;
+    padding: 10px;
+    background-color: rgb(246, 188, 188);
+}
+
+td{
+    color:rgb(83, 40, 93);
+    background-color: rgb(250, 220, 220);
+    border: 1px solid;
+    padding: 10px;
+}
