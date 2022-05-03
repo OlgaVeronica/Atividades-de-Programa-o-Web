@@ -1,2 +1,2 @@
-# Atividades-de-Programa-o-Web
+# Atividades-de-Web
 Atividades desenvolvidas na disciplina de Programação WEB
