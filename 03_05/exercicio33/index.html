@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Telefone</title>
 </head>
 <script>
-    
+    function telefone(v){
+ v.value=v.value.replace(/\D/g,"");
+ v.value=v.value.replace(/^(\d\d)(\d)/g,"($1)$2");
+ v.value=v.value.replace(/(\a{4})(\d)/,"$1-$2");
+}
 </script>
 <body>
-    
+    <form action="#" onsubmit="return telefone(v)">
+        Insira o telefone: <input type="text" name="telefone"
+        onkeypress=" telefone(this);" onkeyup=" telefone(this);">
+        <input type="submit" name="botao" value="Enviar">
+    </form>
 </body>
 </html>

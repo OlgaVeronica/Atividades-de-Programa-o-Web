@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Numeros</title>
 </head>
 <script>
-    
+    function numeros(v){
+  v.value=v.value.replace(/\D/g,"");
+}
 </script>
 <body>
-    
+    <form action="#" onsubmit="return numeros(v)">
+        Insira o Numero: <input type="text" name="numero"
+        onkeypress=" numeros(this);" onkeyup=" numeros(this);">
+        <input type="submit" name="botao" value="Enviar">
+    </form>
 </body>
 </html>

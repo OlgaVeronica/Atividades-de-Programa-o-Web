@@ -7,9 +7,18 @@
     <title>Document</title>
 </head>
 <script>
-    
+    function cpf(v){
+ v.value=v.value.replace(/\D/g,"");
+ v.value=v.value.replace(/(\d{3})(\d)/,"$1.$2");
+ v.value=v.value.replace(/(\d{3})(\d)/,"$1.$2");
+ v.value=v.value.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+}
 </script>
 <body>
-    
+    <form action="#" onsubmit="return cpf(v)">
+        Insira o cpf: <input type="text" name="cpf"
+        onkeypress=" cpf(this);" onkeyup=" cpf(this);">
+        <input type="submit" name="botao" value="Enviar">
+    </form>
 </body>
 </html>
