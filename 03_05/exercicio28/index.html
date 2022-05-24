@@ -5,8 +5,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        th{
+            text-align: center;
+        }
+        .titulos{
+            padding-top: 40px;
+            padding-left: 50px 1px;
+        }
+        th#prod{
+            text-align: center;
+            padding: 50px 80px 10px 100px;
+        }
+        td{
+            padding: 20px;
+            text-align: center;
+        }
+        .rotenote{
+            text-align: left;
+        }
+
+    </style>
 </head>
-<body>
+<script>
     
+</script>
+<body>
+    <h1>Carrinho de Compras</h1>
+    Insira o cep da sua cidade: <input type="text"> - <input type="text"> <input type="submit" value="Calcular frete">
+    <table>
+        <tr>
+            <th id="prod">Produto</th>
+            <th class="titulos">Quantidade</th>
+            <th class="titulos">Entrega</th>
+            <th class="titulos">Valor Unitário</th>
+            <th class="titulos">Valor Total</th>
+        </tr>
+        <tr>
+            <td class="rotenote">
+                <img src="roteador.png">
+                <strong> Roteador</strong> <br>
+                Intel Core i5 6GB 1TB <br> LED 14" Touchscreen Windows8
+            </td>
+            <td>
+               <input type="text" value="1">
+            </td>
+            <td>
+                Informe o Cep
+            </td>
+            <td>
+                R$ 2999,00
+            </td>
+            <td>
+                R$ 2999,00
+            </td>
+        </tr>
+        <tr>
+            <td class="rotenote">
+                <img src="notebook.png">
+                <strong> Notebook</strong> <br>
+                Wireless RouterN150MbpsS
+            </td>
+            <td>
+               <input type="text" value="1">
+            </td>
+            <td>
+                Informe o Cep
+            </td>
+            <td>
+                R$ 2999,00
+            </td>
+            <td>
+                R$ 2999,00
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Subtotal</td>
+            <td>R$ 3078,00</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Frete</td>
+            <td>R$ 0,00</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><strong>Total</strong></td>
+            <td>R$ 3078,00</td>
+        </tr>
+    </table>
+
+    <table>
+        
+    </table>
 </body>
 </html>
