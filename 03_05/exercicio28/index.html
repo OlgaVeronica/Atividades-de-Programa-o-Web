@@ -28,11 +28,18 @@
     </style>
 </head>
 <script>
-    
+    function Quantidade(v){
+        v.value=v.value.replace(/\D/g,"");
+    }
 </script>
 <body>
     <h1>Carrinho de Compras</h1>
-    Insira o cep da sua cidade: <input type="text"> - <input type="text"> <input type="submit" value="Calcular frete">
+     <form action="#" onsubmit="return Quantidade(v)">
+        Insira o cep da sua cidade:
+        <input type="text" name="qtd" maxlength="5" onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);"> -
+        <input type="text" name="qtd" maxlength="3" onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);">
+        <input type="submit" value="Calcular frete">
+    </form>  
     <table>
         <tr>
             <th id="prod">Produto</th>
@@ -48,7 +55,10 @@
                 Intel Core i5 6GB 1TB <br> LED 14" Touchscreen Windows8
             </td>
             <td>
-               <input type="text" value="1">
+                <form action="#" onsubmit="return Quantidade(v)">
+                    <input type="text" name="qtd" maxlength="1" 
+                    onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);">
+                </form>
             </td>
             <td>
                 Informe o Cep
@@ -67,7 +77,10 @@
                 Wireless RouterN150MbpsS
             </td>
             <td>
-               <input type="text" value="1">
+                <form action="#" onsubmit="return Quantidade(v)">
+                    <input type="text" name="qtd" maxlength="1" 
+                    onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);">
+                </form>
             </td>
             <td>
                 Informe o Cep
