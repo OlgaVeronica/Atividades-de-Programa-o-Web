@@ -9,10 +9,10 @@
 <script>
     function cep(v){
         v.value = v.value.replace(/\D/g, "");
-        v.value = v.value.replace(/^(\d{5}) (\d)/,"$1-$2");
+        v.value = v.value.replace(/^(\d{5})(\d)/,"$1-$2");
     }
     function camposPreenchidos(form){
-        if(form.cep.value != "" && form.cep.value.length == 9){
+        if(form.cas.value != "" && form.cas.value.length == 9){
             return true;
         }
         return false
@@ -20,8 +20,7 @@
 </script>
 <body>
     <form action="#" method="post" onsubmit="return camposPreenchidos(this);">
-        CEP: <input type="text" name="cep" onkeydown="cep(this);"
-               onkeypress=" cep(this);" onkeyup=" cep(this);" maxlength="9"><br/>
+        CEP: <input type="text" name="cas" onkeydown="cep(this);" onkeypress=" cep(this);" onkeyup=" cep(this);" maxlength="9"><br/>
         <input type="submit" name="botao" value="Enviar">
       </form>
 </body>

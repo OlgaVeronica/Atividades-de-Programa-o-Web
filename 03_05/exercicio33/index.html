@@ -10,13 +10,12 @@
     function telefone(v){
  v.value=v.value.replace(/\D/g,"");
  v.value=v.value.replace(/^(\d\d)(\d)/g,"($1)$2");
- v.value=v.value.replace(/(\a{4})(\d)/,"$1-$2");
+ v.value=v.value.replace(/^(\a{4})(\d)/,"$1-$2");
 }
 </script>
 <body>
     <form action="#" onsubmit="return telefone(v)">
-        Insira o telefone: <input type="text" name="telefone"
-        onkeypress=" telefone(this);" onkeyup=" telefone(this);">
+        Insira o telefone: <input type="text" name="tele" onkeypress=" telefone(this);" onkeyup="telefone(this);">
         <input type="submit" name="botao" value="Enviar">
     </form>
 </body>

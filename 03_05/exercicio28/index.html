@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrinho de compras</title>
     <style>
         th{
             text-align: center;
@@ -24,20 +24,30 @@
         .rotenote{
             text-align: left;
         }
+        img{
+            float: left;
+        }
 
     </style>
 </head>
 <script>
+    function cep(v){
+        v.value =v.value.replace(/\D/g,"");
+    }
     function Quantidade(v){
-        v.value=v.value.replace(/\D/g,"");
+        console.log(v)
+        cep(v)
+        if(parseInt(v.value) > 9){
+            v.value = 9
+        }
     }
 </script>
 <body>
     <h1>Carrinho de Compras</h1>
      <form action="#" onsubmit="return Quantidade(v)">
         Insira o cep da sua cidade:
-        <input type="text" name="qtd" maxlength="5" onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);"> -
-        <input type="text" name="qtd" maxlength="3" onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);">
+        <input type="text" name="qtd" maxlength="5" onkeypress="cep(this);" onkeyup="cep(this);"> -
+        <input type="text" name="qtd" maxlength="3" onkeypress="cep(this);" onkeyup="cep(this);">
         <input type="submit" value="Calcular frete">
     </form>  
     <table>
@@ -51,13 +61,12 @@
         <tr>
             <td class="rotenote">
                 <img src="roteador.png">
-                <strong> Roteador</strong> <br>
-                Intel Core i5 6GB 1TB <br> LED 14" Touchscreen Windows8
+                <strong>Roteador</strong> <br>
+                Wireless RouterN150MbpsS
             </td>
             <td>
                 <form action="#" onsubmit="return Quantidade(v)">
-                    <input type="text" name="qtd" maxlength="1" 
-                    onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);">
+                    <input type="text" name="qtd" onblur="Quantidade(this)">
                 </form>
             </td>
             <td>
@@ -74,12 +83,12 @@
             <td class="rotenote">
                 <img src="notebook.png">
                 <strong> Notebook</strong> <br>
-                Wireless RouterN150MbpsS
+                Intel Core i5 6GB 1TB LED 14" Touchscreen Windows8
+                
             </td>
             <td>
                 <form action="#" onsubmit="return Quantidade(v)">
-                    <input type="text" name="qtd" maxlength="1" 
-                    onkeypress="Quantidade(this);" onkeyup=" Quantidade(this);">
+                    <input type="text" name="qtd" onblur="Quantidade(this)">
                 </form>
             </td>
             <td>

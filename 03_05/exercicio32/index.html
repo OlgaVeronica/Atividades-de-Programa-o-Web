@@ -8,15 +8,14 @@
 </head>
 <script>
     function data(v){
- v.value=v.value.replace(/\D/g,"");
- v.value=v.value.replace(/^(\d{2})(\d)/,"$1/$2");
- v.value=v.value.replace(/(\d{2})(\d)/,"$1/$2");
+    v.value=v.value.replace(/\D/g,"");
+    v.value=v.value.replace(/^(\d{2})(\d)/,"$1/$2");
+    v.value=v.value.replace(/(\d{2})(\d)/,"$1/$2");
 }
 </script>
 <body>
-    <form action="#" onsubmit="return data(v)">
-        Insira a data: <input type="text" name="data"
-        onkeypress=" data(this);" onkeyup=" data(this);">
+    <form action="#" onsubmit="return data(this)">
+        Insira a data: <input type="text" name="date" onkeypress=" data(this);" onkeyup=" data(this);" maxlength="8">
         <input type="submit" name="botao" value="Enviar">
     </form>
 </body>
