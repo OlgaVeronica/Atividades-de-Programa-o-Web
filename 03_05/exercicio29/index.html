@@ -1,20 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            
+        }
+        body {
+            background-color: #757171;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 20px;
+            
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        #formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 400px ;
+            margin: 40px auto 0;
+            color: rgb(161, 57, 39);
+            border-radius: 20px;
+            background-color: #fff;
+            padding: 30px;
+
+        }
+
+        #submit {
+            
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(117, 29, 13);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        #submit:hover {
+            background-color: #c7928a;
+            color: rgb(223, 201, 198);
+        }
+
+        input[type=text], input[type=password] {
+            border: rgb(161, 57, 39) solid 1px;
+            border-radius: 5px;
+            min-height: 30px;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #fae7e4;
+            border: rgb(161, 57, 39) solid 1px;
+            outline: none;
+        }
+
+        #verifica-senha {
+            font-size: 1rem;
+            color: black;
+            font-weight: normal;
+            text-align: right;
+            font-style: italic;
+
+        }
+    </style>
 </head>
-<script>
-    function email(){
-        
-    }
-</script>
 <body>
-    <form action="#">
-        Email: <input type="text" name="email">
-        Senha: <input type="text" name="senha">
+    <form id="formulario">
+
+        <h1>Fale Conosco</h1>
+        <label for="name" >Insira o nome</label>
+        <input type="text"  id="name" autocomplete="off" ">
+
+        <label for="email">Insira o email</label>
+        <input type="text"  id="email"  autocomplete="off">
+
+        <label for="senha">Insira a senha</label>
+        <input type="password"  id="senha">
+
+        
+        <span id="verifica-senha"></span>
+        
+        <input type="submit" id="submit" value="Acessar">
+        
     </form>
+
+    <script>
+
+        const senhaReGex = /[a-zA-Z0-9]{6,10}/;
+        const senhaForteReGex = /(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/;
+        const inputSenha = document.getElementById('senha');
+
+     
+
+        const inputName = document.getElementById('name');
+
+        const emailReGex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const inputEmail = document.getElementById('email');
+
+        const verificaSenha = document.getElementById('verifica-senha')
+
+        
+        
+
+        inputSenha.addEventListener('keyup', validaSenha)
+
+        function validaSenha(a = ''){
+            if (inputSenha.value.match(senhaReGex)){
+                verificaSenha.textContent = inputSenha.value.match(senhaForteReGex)? 'Senha forte!!' : 'insira uma senha forte'
+                
+            } else {
+
+                verificaSenha.textContent = (inputSenha.value.length == 0)? '' : 'insira uma senha forte'
+
+            }  
+
+            if(a == 1){
+
+                let valida =  verificaSenha.textContent == 'Senha forte!!'? true : false;
+                
+                if(!valida){
+                    alert('Insira uma senha forte')
+                }
+                return valida;
+            }
+        }
+
+
+
+        function validaNome() {
+            let nomes = inputName.value.split(' ')
+
+
+            if (nomes.length < 2){
+                inputName.focus();
+                alert("Insira apenas um nome composto")
+                return false
+                
+            }
+
+            for (let i = 0; i < nomes.length; i++){
+                console.log(nomes[i].length)
+
+                if (nomes[i].length < 2){
+                    alert('Insira nomes com mais de 2 letras')
+                    return false                    
+                }
+                
+            }
+            return true
+        }
+
+
+        function validaEmail(){
+            let valida = inputEmail.value.match(emailReGex)? true: false
+
+            if(!valida) {
+                alert("Insira o email corretamente")
+                return false
+            }
+            return true
+        }
+
+        const form = document.getElementById('formulario');
+        form.addEventListener('submit', () => { 
+            validaNome() && validaEmail() && validaSenha(1);     
+        })
+
+    </script>
 </body>
 </html>
